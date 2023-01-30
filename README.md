@@ -1,2 +1,2 @@
 # powerbi
-Repositório com aprendizado e projetos: PowerBi
+Repositório com aprendizado e exercícios: PowerBi
