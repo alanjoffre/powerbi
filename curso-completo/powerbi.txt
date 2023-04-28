@@ -1,0 +1,35 @@
+Curso Completo - Power Bi
+
+O que é Business intelligence?
+O business intelligence (BI) combina análise empresarial, mineração de dados, visualização de dados, 
+ferramentas/infraestrutura de dados e práticas recomendadas para ajudar as organizações a tomar decisões impulsionadas por dados.
+
+-Coleta e organização
+-Analise e visualização
+-Compartilhamento e monitoramento
+-Suporte a gestão do negócio
+-Mensurar o desempenho do passado
+-Planejar o futuro
+
+Quais perguntas o BI, responde?
+-O quê aconteceu?
+-Quanto?
+-Quando?
+-Onde?
+-Quem?
+
+Por que implementar indicadores de desempenho?
+
+Controle da empresa
+-Analisar o passado, o presente e planejar o futuro. Este ciclo é continuo e é processo chave nas organizações.
+
+--Comunicação de objetivos
+---É importante que as pessoas conheçam o planejamento estrátegico da empresa.
+
+--Motivação dos colaboradores
+---Motivar os funcionários, tirá-los da zona de conforto demonstranhdo os beneficios de alcançar um novo estado é fundamental.
+
+--Direcionamento de melhorias
+---Buscar melhorias é essencial para a sobrevivência de toda empresa, em um cenário cada vez mais exigente e competitivo.
+
+
