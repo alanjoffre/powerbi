@@ -103,7 +103,7 @@ clicar em: Atualizar visualização > Atualizar Tudo, que tudo será atualizado 
 -Volte para a Página: Análise de Estoque > Selecione o gráfico que terá a Dica de Ferramenta > Formatar Visual > Geral > 
 -- Continuação da linha anterior > Dica de Ferramenta > Pagina e aponte a página criada de Dica de Ferramenta
 
-Inciando o projeto - Análise/Funcionários - Power Bi Desktop
+Inciando o projeto - Análise/Colaboradores - Power Bi Desktop
 
 -Com o power Bi aberto, crie quatro abas: Menu, Análise de Pessoal, Análise Financeira e Contatos
 -Importe os slides
@@ -122,6 +122,15 @@ Inciando o projeto - Análise/Funcionários - Power Bi Desktop
 -Inserir icones no dashboard
 -Inserir > Imagem > Selecione o seu icone e clieque em Abrir
 
+-Importante: Quando removo uma coluna no Power Query, não altero os dados na minha fonte(planilha de excel ou tabela do banco de dados)
+
+-Atualizar a coluna idade, para ficar atualizada e automático.
+--Clieque na coluna: Data de Nascimento > Adicionar coluna > Data > Idade
+--Mova a nova coluna para que fique ao lado da coluna Idade
+--Clique na nova coluna de Idade.1 > Transformar > Duração > Total de Anos
+--Clique na nova coluna de Idade.1 > Transformar > Arredondamento > Arredondar para baixo
+--Remova a coluna original/desatualizada de Idade
+--Renomeia a nova coluna Idade.1 para Idade
 
 
 

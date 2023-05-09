@@ -1,4 +1,4 @@
-# Power Bi - Análise de Funcionários
+# Power Bi - Análise de Colaboradores
 ## Cenário apresentado:
 ### - Quantos funcionários existem atualmente na empresa?
 ### - Atualmente, existem mais funcionários do gênero masculino ou do gênero feminino?
