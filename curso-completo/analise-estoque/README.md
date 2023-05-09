@@ -1,5 +1,5 @@
 # Power Bi - Análise de Estoque
-## Necessidade:
+## Cenário apresentado:
 
 ### - Analise de estoque por loja x categoria.
 ### - Análise de estoque por periodo.
