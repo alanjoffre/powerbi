@@ -1,5 +1,5 @@
 # Power Bi - Análise de Funcionários
-## Apresentação:
+## Necessidade:
 ### - Quantos funcionários existem atualmente na empresa?
 ### - Atualmente, existem mais funcionários do gênero masculino ou do gênero feminino?
 ### - Quantos funcionários existem em cada setor da organização?
