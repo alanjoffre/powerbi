@@ -103,4 +103,27 @@ clicar em: Atualizar visualização > Atualizar Tudo, que tudo será atualizado 
 -Volte para a Página: Análise de Estoque > Selecione o gráfico que terá a Dica de Ferramenta > Formatar Visual > Geral > 
 -- Continuação da linha anterior > Dica de Ferramenta > Pagina e aponte a página criada de Dica de Ferramenta
 
+Inciando o projeto - Análise/Funcionários - Power Bi Desktop
+
+-Com o power Bi aberto, crie quatro abas: Menu, Análise de Pessoal, Análise Financeira e Contatos
+-Importe os slides
+-Clique na página Menu > Formato da página > Tela de Fundo > Depois de importar a imagem > Diminuir a transparência.
+
+-Navegação de páginas
+-Clique na aba: Menu > Inserir > Botôes > Botão em branco > Redimensione o botão na área: Analise Pessoal
+-Para retirar o contorno do botão: Botão formatar ao lado direito da tela > Estilo > Desmarque a opção borda.
+-Para adicionar uma ação ao botão: Botão formatar ao lado direito da tela > Habilite a opção Ação > 
+--Continuação da linha anterior: > Tipo: Navegação de Página > Destino: Informe: Análise Pessoal.   
+-Para adicionar uma ação ao botão: Botão formatar ao lado direito da tela > Habilite a opção Ação > 
+--Continuação da linha anterior: > Tipo: URL da Web > Destino: Informe a url para acesso.
+
+-Site para baixar os icones: https://www.flaticon.com/br/
+
+-Inserir icones no dashboard
+-Inserir > Imagem > Selecione o seu icone e clieque em Abrir
+
+
+
+
+
 
