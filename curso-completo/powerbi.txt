@@ -32,4 +32,75 @@ Controle da empresa
 --Direcionamento de melhorias
 ---Buscar melhorias é essencial para a sobrevivência de toda empresa, em um cenário cada vez mais exigente e competitivo.
 
+Inciando o projeto - Análise/Estoque - Power Bi Desktop
+
+-Importe a base de dados: base-de-dados-estoque.xlsx
+-Selecione as tabelas estruturadas, geramente fica na parte superior
+-Clique no campo Transformar dados
+-O power Query será aberto para transfoprmação dos dados
+-Renomei as tabelas por padrão: Tab_Produto, Tab_Data e Tab_Estoque
+
+-Realize o tratamento dos dados conforme modelo
+--Tab_Produtos: Coluna: Descrição do produto-categoria-subcategoria
+---Campo: Pagina inicial > Dividir Coluna > Por delimitador > outlook
+
+-Renomei as colunas, caso seja necessário
+-Campo: Etapas Aplicadas, permite voltar a ação, caso queira retornar algo aplicado.
+
+-Caso não seja feito situações de soma na coluna, é recomendado alterar para tipo texto. 
+-Direito do mouse sobre a coluna, Alterar Tipo, Texto.
+
+-Alterar todo o conteúdo de uma coluna que está em caixa alta.
+-- Clique na coluna, Transformar, Formato, Colocar Cada Palavra em Maiúscula.
+
+-Após alterações necessárias no Power Query, clique em Fechar e Aplicar.
+
+-Caso queira voltar para o Power Query, basta clicar em: Transformar dados
+
+-Importante: Todo item alterado na fonte de dados (planilha de excel) quando salvo, basta entrar no Power Query e 
+clicar em: Atualizar visualização > Atualizar Tudo, que tudo será atualizado automaticamente.
+
+-Alterações importantes a serem realizadas na Tab-Data:
+--Clique na Coluna: Data > Adicionar Coluna > Data > Ano > Ano
+--Clique na Coluna: Data > Adicionar Coluna > Data > Mês > Mês
+--Clique na Coluna: Data > Adicionar Coluna > Data > Mês > Nome do Mês
+-Adicionar uma conuna com apenas as três primeiras letras do mês: Clique em Data > Coluna de Exemplos > 
+--Coloque na Celular o exemplo a ser adotado para as demais celulas.
+--Clique na Coluna: Data > Adicionar Coluna > Data > Trimestre > Trimestre do Ano
+--Cliqeu na coluna: Trimestre > Transformar > Formato > Adicionar Prefixo > T0
+--Clique na Coluna: Data > Adicionar Coluna > Data > Dia > Nome do Dia
+
+-Importante: Não esqueça de salvar o projeto no PowerBi
+
+-Configuração importante para que o PowerBi reconheça em ordem cronologica os meses do ano:
+-Clique nos três pontinhos do gráfico utilizado > Classificar por > Mês abreviado
+--Entre no modelo de dados > Tab_Data
+--Clique na coluna: Mês Abreviado > Classificar por Coluna > Mês
+
+-Planos de Fundo
+-Geramente feito no Power Point
+-Possui aula no repositorio ensinando como montar 
+-Salve o arquivo com a extensão: PNG
+-No PowerBi, clique em uma área em branco > Formatar sua página do relatório > Tela de Fundo > Procure pelo arquivo e Importe
+-Diminua a transparência de 100% para 0%
+-Posicione os gráficos conforme a necessidade
+
+-Paletas de cores 
+-Campo: Exibição
+
+-Copiar uma configuração/layout de um gráfico para aplicar nos demais
+-Clique no gráfico já formatado > Página Inicial > Pincel de Formatação
+
+-Criar um campo para filtro
+-Clique na area do filtro em branco >  Segmentação de Dados > Adicione o filtro (mês abreviado) > 
+-Clique na setinha do filtro para baixo > Suspenso ou 
+-Clique no campo Segmentação de Dados > Formatação Visual > Opção > Estilo > Vertical List
+
+-Dica de Ferramenta
+-Campo: Formatação de Página > Habilitar campo: Permitir usar como dica de Ferramenta
+-Campo: Formatação de Página > Campo: Configurações de tela: Tamanho para > Dica de Ferramenta
+-Criar Visual > Matrix
+-Volte para a Página: Análise de Estoque > Selecione o gráfico que terá a Dica de Ferramenta > Formatar Visual > Geral > 
+-- Continuação da linha anterior > Dica de Ferramenta > Pagina e aponte a página criada de Dica de Ferramenta
+
 
