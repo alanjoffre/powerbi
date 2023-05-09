@@ -132,6 +132,8 @@ Inciando o projeto - Análise/Colaboradores - Power Bi Desktop
 --Remova a coluna original/desatualizada de Idade
 --Renomeia a nova coluna Idade.1 para Idade
 
+40:46
+
 
 
 
