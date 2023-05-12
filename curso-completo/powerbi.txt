@@ -132,9 +132,85 @@ Inciando o projeto - Análise/Colaboradores - Power Bi Desktop
 --Remova a coluna original/desatualizada de Idade
 --Renomeia a nova coluna Idade.1 para Idade
 
-40:46
+-Criando Medidas no PowerBi
+-Campo: Inserir Dados (Enter Data)> Nome: MEDIDAS
+-Direito do mouse sobre o campo MEDIDA > Nova Medida
+-Aparecerá uma célula para apontar a fórmula a ser considerada nessa nova medida:
 
+-Importante: A função DISTINCTCOUNT no Power BI é usada para contar o número de valores distintos em uma coluna ou expressão
+--em uma tabela. Ela retorna um valor inteiro que representa a contagem de valores exclusivos em uma coluna ou expressão.
+--Por exemplo, se você tiver uma tabela com uma coluna "Produtos" e quiser contar quantos produtos únicos existem nessa coluna,
+--você pode usar a função DISTINCTCOUNT da seguinte maneira:
+---NOME_DA_MEDIDA = DISTINCTCOUNT(Tabela[Produtos])
+--Essa fórmula retornará o número de valores distintos na coluna "Produtos" da tabela "Tabela".
+--A função DISTINCTCOUNT é útil para ajudar a entender a distribuição dos dados em uma coluna ou para verificar se há duplicatas. 
+--Também pode ser usada em combinação com outras funções para criar cálculos mais complexos no Power BI.
 
+-Fómula para informar quantos registros(no caso pessoas), tem na minha base de dados:
+Qtde Funcionários = DISTINCTCOUNT(Tab_Colaboradores[Registro])
 
+-Criando Faixas Etárias
+18 - 25 Anos
+26 - 33 Anos
+34 - 41 Anos
+42 - 49 Anos
+50 - 57 Anos
+58 - 65 Anos
+Acima de 66 Anos
 
+-Crie uma nova coluna na tabela: Tab_Colaboradores(Será uma coluna Calculada - Função Lógica)
+--A função SWITCH no Power BI é usada para retornar um valor com base em uma expressão ou condição específica. 
+--Ela é usada para simplificar a lógica de vários testes condicionais aninhados em uma única fórmula.
+--A função SWITCH é semelhante à instrução CASE em outras linguagens de programação. Ela compara uma expressão ou
+-- valor a uma série de casos ou condições e retorna o valor correspondente do primeiro caso que é verdadeiro. 
+--A sintaxe básica da função SWITCH é a seguinte:
 
+SWITCH(expressão, valor1, resultado1, valor2, resultado2, ..., valorN, resultadoN, [valorPadrão])
+
+Onde:
+
+expressão: é a expressão ou valor que você deseja testar.
+
+valor1, valor2, ..., valorN: são os valores que você deseja comparar com a expressão.
+
+resultado1, resultado2, ..., resultadoN: são os valores que você deseja retornar se a expressão for igual a um dos 
+valores comparados.
+
+valorPadrão (opcional): é o valor a ser retornado se a expressão não corresponder a nenhum dos valores comparados.
+
+Por exemplo, se você quiser atribuir uma classificação com base no valor de uma coluna "Quantidade", 
+você poderia usar a função SWITCH da seguinte maneira:
+
+Classificação =
+SWITCH(
+    [Quantidade],
+    [Quantidade] < 100, "Baixa",
+    [Quantidade] < 500, "Média",
+    [Quantidade] < 1000, "Alta",
+    "Muito alta"
+)
+
+Neste exemplo, a função SWITCH compara o valor da coluna "Quantidade" com uma série de valores e retorna uma classificação
+correspondente com base no primeiro caso que for verdadeiro. Se o valor da coluna for menor que 100, a classificação será 
+"Baixa". Se for maior ou igual a 100 e menor que 500, a classificação será "Média", e assim por diante. 
+Se a quantidade não corresponder a nenhum dos valores comparados, a classificação padrão será "Muito alta".
+
+-Fómula para classificar faixa-etária no PowerBi:
+
+Faixa Etária = 
+SWITCH(
+    TRUE(), 
+    TB_colaboradores[Idade] <= 25, "18 - 25",
+    TB_colaboradores[Idade] <= 33, "26 - 33",
+    TB_colaboradores[Idade] <= 41, "34 - 41",
+    TB_colaboradores[Idade] <= 49, "42 - 49",
+    TB_colaboradores[Idade] <= 57, "50 - 57",
+    TB_colaboradores[Idade] <= 65, "58 - 65",
+    TB_colaboradores[Idade] >= 66, ">= 66"
+)
+
+-Fómula para somar o total de salário pagos em uma empresa: 
+Total de salários = SUM(TB_colaboradores[Salário Bruto])
+
+-Fómula para calcular a média salarial pago em uma empresa: 
+Média Salarial = AVERAGE(TB_colaboradores[Salário Bruto])
