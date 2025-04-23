@@ -1,0 +1,35 @@
+let
+    DataMin = List.Min(fRespostasNPS[DATA_RESPOSTA]),
+    DataMax = List.Max(fRespostasNPS[DATA_RESPOSTA]),
+    QtdeDias = Duration.Days (DataMax - DataMin) + 1,
+    ListarDatas = List.Dates(DataMin, QtdeDias, #duration (1,0,0,0)),
+    ConverterTabelaDatas = Table.FromList(ListarDatas, Splitter.SplitByNothing(), null, null, ExtraValues.Error),
+    #"Colunas Renomeadas" = Table.RenameColumns(ConverterTabelaDatas,{{"Column1", "DATA"}}),
+    #"Tipo Alterado" = Table.TransformColumnTypes(#"Colunas Renomeadas",{{"DATA", type date}}),
+    #"Trimestre Inserido" = Table.AddColumn(#"Tipo Alterado", "Trimestre", each Date.QuarterOfYear([DATA]), Int64.Type),
+    #"Prefixo Adicionado" = Table.TransformColumns(#"Trimestre Inserido", {{"Trimestre", each "TRI 0" & Text.From(_, "pt-BR"), type text}}),
+    #"Mês Inserido" = Table.AddColumn(#"Prefixo Adicionado", "Mês", each Date.Month([DATA]), Int64.Type),
+    #"Nome do Mês Inserido" = Table.AddColumn(#"Mês Inserido", "Nome do Mês", each Date.MonthName([DATA]), type text),
+    #"Primeiros Caracteres Inseridos" = Table.AddColumn(#"Nome do Mês Inserido", "Primeiros caracteres", each Text.Start(Text.Upper([Nome do Mês]), 3), type text),
+    #"Colunas Renomeadas1" = Table.RenameColumns(#"Primeiros Caracteres Inseridos",{{"Primeiros caracteres", "Mês Abreviado"}}),
+    #"Semana do Mês Inserida" = Table.AddColumn(#"Colunas Renomeadas1", "Semana do Mês", each Date.WeekOfMonth([DATA]), Int64.Type),
+    #"Semana do Ano Inserida" = Table.AddColumn(#"Semana do Mês Inserida", "Semana do Ano", each Date.WeekOfYear([DATA]), Int64.Type),
+    #"Dia do Ano Inserido" = Table.AddColumn(#"Semana do Ano Inserida", "Dia do Ano", each Date.DayOfYear([DATA]), Int64.Type),
+    #"Nome do Dia Inserido" = Table.AddColumn(#"Dia do Ano Inserido", "Nome do Dia", each Date.DayOfWeekName([DATA]), type text),
+    #"Coluna Condicional Adicionada" = Table.AddColumn(#"Nome do Dia Inserido", "Semestre", each if [Mês] <= 6 then "SEM 01" else "SEM 02"),
+    #"Colunas Reordenadas" = Table.ReorderColumns(#"Coluna Condicional Adicionada",{"DATA", "Semestre", "Trimestre", "Mês", "Nome do Mês", "Mês Abreviado", "Semana do Mês", "Semana do Ano", "Dia do Ano", "Nome do Dia"})
+in
+    #"Colunas Reordenadas"
+	
+
+/* Etapas:
+
+1 - Listar a Data Mínima com a função List.Min, é necessário indicar no formato Tabela[Coluna]
+2 - Listar a Data Máxima com a função List.Max é necessário indicar no formato Tabela[Coluna]
+3 - Detectar a quantidade de dias entre a data mínima e máxima, usando a função Duration.Days
+4 - Listar as Datas com a Função List.Dates, usando Parametro #duration
+5 - Converter em Tabela usando a guia Transformar no Power Query
+6 - Alterar Tipo para Data e Renomear se necessário
+7 - Inserir informações de Datas que serão necessárias na dimensão Calendário
+
+*/

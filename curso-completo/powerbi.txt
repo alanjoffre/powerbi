@@ -1,0 +1,216 @@
+Curso Completo - Power Bi
+
+O que é Business intelligence?
+O business intelligence (BI) combina análise empresarial, mineração de dados, visualização de dados, 
+ferramentas/infraestrutura de dados e práticas recomendadas para ajudar as organizações a tomar decisões impulsionadas por dados.
+
+-Coleta e organização
+-Analise e visualização
+-Compartilhamento e monitoramento
+-Suporte a gestão do negócio
+-Mensurar o desempenho do passado
+-Planejar o futuro
+
+Quais perguntas o BI, responde?
+-O quê aconteceu?
+-Quanto?
+-Quando?
+-Onde?
+-Quem?
+
+Por que implementar indicadores de desempenho?
+
+Controle da empresa
+-Analisar o passado, o presente e planejar o futuro. Este ciclo é continuo e é processo chave nas organizações.
+
+--Comunicação de objetivos
+---É importante que as pessoas conheçam o planejamento estrátegico da empresa.
+
+--Motivação dos colaboradores
+---Motivar os funcionários, tirá-los da zona de conforto demonstranhdo os beneficios de alcançar um novo estado é fundamental.
+
+--Direcionamento de melhorias
+---Buscar melhorias é essencial para a sobrevivência de toda empresa, em um cenário cada vez mais exigente e competitivo.
+
+Inciando o projeto - Análise/Estoque - Power Bi Desktop
+
+-Importe a base de dados: base-de-dados-estoque.xlsx
+-Selecione as tabelas estruturadas, geramente fica na parte superior
+-Clique no campo Transformar dados
+-O power Query será aberto para transfoprmação dos dados
+-Renomei as tabelas por padrão: Tab_Produto, Tab_Data e Tab_Estoque
+
+-Realize o tratamento dos dados conforme modelo
+--Tab_Produtos: Coluna: Descrição do produto-categoria-subcategoria
+---Campo: Pagina inicial > Dividir Coluna > Por delimitador > outlook
+
+-Renomei as colunas, caso seja necessário
+-Campo: Etapas Aplicadas, permite voltar a ação, caso queira retornar algo aplicado.
+
+-Caso não seja feito situações de soma na coluna, é recomendado alterar para tipo texto. 
+-Direito do mouse sobre a coluna, Alterar Tipo, Texto.
+
+-Alterar todo o conteúdo de uma coluna que está em caixa alta.
+-- Clique na coluna, Transformar, Formato, Colocar Cada Palavra em Maiúscula.
+
+-Após alterações necessárias no Power Query, clique em Fechar e Aplicar.
+
+-Caso queira voltar para o Power Query, basta clicar em: Transformar dados
+
+-Importante: Todo item alterado na fonte de dados (planilha de excel) quando salvo, basta entrar no Power Query e 
+clicar em: Atualizar visualização > Atualizar Tudo, que tudo será atualizado automaticamente.
+
+-Alterações importantes a serem realizadas na Tab-Data:
+--Clique na Coluna: Data > Adicionar Coluna > Data > Ano > Ano
+--Clique na Coluna: Data > Adicionar Coluna > Data > Mês > Mês
+--Clique na Coluna: Data > Adicionar Coluna > Data > Mês > Nome do Mês
+-Adicionar uma conuna com apenas as três primeiras letras do mês: Clique em Data > Coluna de Exemplos > 
+--Coloque na Celular o exemplo a ser adotado para as demais celulas.
+--Clique na Coluna: Data > Adicionar Coluna > Data > Trimestre > Trimestre do Ano
+--Cliqeu na coluna: Trimestre > Transformar > Formato > Adicionar Prefixo > T0
+--Clique na Coluna: Data > Adicionar Coluna > Data > Dia > Nome do Dia
+
+-Importante: Não esqueça de salvar o projeto no PowerBi
+
+-Configuração importante para que o PowerBi reconheça em ordem cronologica os meses do ano:
+-Clique nos três pontinhos do gráfico utilizado > Classificar por > Mês abreviado
+--Entre no modelo de dados > Tab_Data
+--Clique na coluna: Mês Abreviado > Classificar por Coluna > Mês
+
+-Planos de Fundo
+-Geramente feito no Power Point
+-Possui aula no repositorio ensinando como montar 
+-Salve o arquivo com a extensão: PNG
+-No PowerBi, clique em uma área em branco > Formatar sua página do relatório > Tela de Fundo > Procure pelo arquivo e Importe
+-Diminua a transparência de 100% para 0%
+-Posicione os gráficos conforme a necessidade
+
+-Paletas de cores 
+-Campo: Exibição
+
+-Copiar uma configuração/layout de um gráfico para aplicar nos demais
+-Clique no gráfico já formatado > Página Inicial > Pincel de Formatação
+
+-Criar um campo para filtro
+-Clique na area do filtro em branco >  Segmentação de Dados > Adicione o filtro (mês abreviado) > 
+-Clique na setinha do filtro para baixo > Suspenso ou 
+-Clique no campo Segmentação de Dados > Formatação Visual > Opção > Estilo > Vertical List
+
+-Dica de Ferramenta
+-Campo: Formatação de Página > Habilitar campo: Permitir usar como dica de Ferramenta
+-Campo: Formatação de Página > Campo: Configurações de tela: Tamanho para > Dica de Ferramenta
+-Criar Visual > Matrix
+-Volte para a Página: Análise de Estoque > Selecione o gráfico que terá a Dica de Ferramenta > Formatar Visual > Geral > 
+-- Continuação da linha anterior > Dica de Ferramenta > Pagina e aponte a página criada de Dica de Ferramenta
+
+Inciando o projeto - Análise/Colaboradores - Power Bi Desktop
+
+-Com o power Bi aberto, crie quatro abas: Menu, Análise de Pessoal, Análise Financeira e Contatos
+-Importe os slides
+-Clique na página Menu > Formato da página > Tela de Fundo > Depois de importar a imagem > Diminuir a transparência.
+
+-Navegação de páginas
+-Clique na aba: Menu > Inserir > Botôes > Botão em branco > Redimensione o botão na área: Analise Pessoal
+-Para retirar o contorno do botão: Botão formatar ao lado direito da tela > Estilo > Desmarque a opção borda.
+-Para adicionar uma ação ao botão: Botão formatar ao lado direito da tela > Habilite a opção Ação > 
+--Continuação da linha anterior: > Tipo: Navegação de Página > Destino: Informe: Análise Pessoal.   
+-Para adicionar uma ação ao botão: Botão formatar ao lado direito da tela > Habilite a opção Ação > 
+--Continuação da linha anterior: > Tipo: URL da Web > Destino: Informe a url para acesso.
+
+-Site para baixar os icones: https://www.flaticon.com/br/
+
+-Inserir icones no dashboard
+-Inserir > Imagem > Selecione o seu icone e clieque em Abrir
+
+-Importante: Quando removo uma coluna no Power Query, não altero os dados na minha fonte(planilha de excel ou tabela do banco de dados)
+
+-Atualizar a coluna idade, para ficar atualizada e automático.
+--Clieque na coluna: Data de Nascimento > Adicionar coluna > Data > Idade
+--Mova a nova coluna para que fique ao lado da coluna Idade
+--Clique na nova coluna de Idade.1 > Transformar > Duração > Total de Anos
+--Clique na nova coluna de Idade.1 > Transformar > Arredondamento > Arredondar para baixo
+--Remova a coluna original/desatualizada de Idade
+--Renomeia a nova coluna Idade.1 para Idade
+
+-Criando Medidas no PowerBi
+-Campo: Inserir Dados (Enter Data)> Nome: MEDIDAS
+-Direito do mouse sobre o campo MEDIDA > Nova Medida
+-Aparecerá uma célula para apontar a fórmula a ser considerada nessa nova medida:
+
+-Importante: A função DISTINCTCOUNT no Power BI é usada para contar o número de valores distintos em uma coluna ou expressão
+--em uma tabela. Ela retorna um valor inteiro que representa a contagem de valores exclusivos em uma coluna ou expressão.
+--Por exemplo, se você tiver uma tabela com uma coluna "Produtos" e quiser contar quantos produtos únicos existem nessa coluna,
+--você pode usar a função DISTINCTCOUNT da seguinte maneira:
+---NOME_DA_MEDIDA = DISTINCTCOUNT(Tabela[Produtos])
+--Essa fórmula retornará o número de valores distintos na coluna "Produtos" da tabela "Tabela".
+--A função DISTINCTCOUNT é útil para ajudar a entender a distribuição dos dados em uma coluna ou para verificar se há duplicatas. 
+--Também pode ser usada em combinação com outras funções para criar cálculos mais complexos no Power BI.
+
+-Fómula para informar quantos registros(no caso pessoas), tem na minha base de dados:
+Qtde Funcionários = DISTINCTCOUNT(Tab_Colaboradores[Registro])
+
+-Criando Faixas Etárias
+18 - 25 Anos
+26 - 33 Anos
+34 - 41 Anos
+42 - 49 Anos
+50 - 57 Anos
+58 - 65 Anos
+Acima de 66 Anos
+
+-Crie uma nova coluna na tabela: Tab_Colaboradores(Será uma coluna Calculada - Função Lógica)
+--A função SWITCH no Power BI é usada para retornar um valor com base em uma expressão ou condição específica. 
+--Ela é usada para simplificar a lógica de vários testes condicionais aninhados em uma única fórmula.
+--A função SWITCH é semelhante à instrução CASE em outras linguagens de programação. Ela compara uma expressão ou
+-- valor a uma série de casos ou condições e retorna o valor correspondente do primeiro caso que é verdadeiro. 
+--A sintaxe básica da função SWITCH é a seguinte:
+
+SWITCH(expressão, valor1, resultado1, valor2, resultado2, ..., valorN, resultadoN, [valorPadrão])
+
+Onde:
+
+expressão: é a expressão ou valor que você deseja testar.
+
+valor1, valor2, ..., valorN: são os valores que você deseja comparar com a expressão.
+
+resultado1, resultado2, ..., resultadoN: são os valores que você deseja retornar se a expressão for igual a um dos 
+valores comparados.
+
+valorPadrão (opcional): é o valor a ser retornado se a expressão não corresponder a nenhum dos valores comparados.
+
+Por exemplo, se você quiser atribuir uma classificação com base no valor de uma coluna "Quantidade", 
+você poderia usar a função SWITCH da seguinte maneira:
+
+Classificação =
+SWITCH(
+    [Quantidade],
+    [Quantidade] < 100, "Baixa",
+    [Quantidade] < 500, "Média",
+    [Quantidade] < 1000, "Alta",
+    "Muito alta"
+)
+
+Neste exemplo, a função SWITCH compara o valor da coluna "Quantidade" com uma série de valores e retorna uma classificação
+correspondente com base no primeiro caso que for verdadeiro. Se o valor da coluna for menor que 100, a classificação será 
+"Baixa". Se for maior ou igual a 100 e menor que 500, a classificação será "Média", e assim por diante. 
+Se a quantidade não corresponder a nenhum dos valores comparados, a classificação padrão será "Muito alta".
+
+-Fómula para classificar faixa-etária no PowerBi:
+
+Faixa Etária = 
+SWITCH(
+    TRUE(), 
+    TB_colaboradores[Idade] <= 25, "18 - 25",
+    TB_colaboradores[Idade] <= 33, "26 - 33",
+    TB_colaboradores[Idade] <= 41, "34 - 41",
+    TB_colaboradores[Idade] <= 49, "42 - 49",
+    TB_colaboradores[Idade] <= 57, "50 - 57",
+    TB_colaboradores[Idade] <= 65, "58 - 65",
+    TB_colaboradores[Idade] >= 66, ">= 66"
+)
+
+-Fómula para somar o total de salário pagos em uma empresa: 
+Total de salários = SUM(TB_colaboradores[Salário Bruto])
+
+-Fómula para calcular a média salarial pago em uma empresa: 
+Média Salarial = AVERAGE(TB_colaboradores[Salário Bruto])
